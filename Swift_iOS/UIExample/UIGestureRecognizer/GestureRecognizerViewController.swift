@@ -9,7 +9,7 @@
 import UIKit
 
 class GestureRecognizerViewController: UIViewController {
-    var panView:UIView!
+    var panView:UILabel!
     
 
     override func viewDidLoad() {
@@ -18,6 +18,8 @@ class GestureRecognizerViewController: UIViewController {
         // Do any additional setup after loading the view.
         self.view.backgroundColor = UIColor.white
         self.navigationItem.title = "UIGestureRecognizer"
+        
+        self.createCenterPanView()
         self.createGestureRecognizer()
     }
 
@@ -39,7 +41,16 @@ class GestureRecognizerViewController: UIViewController {
 
     
     
-    
+    func createCenterPanView() {
+        self.panView = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        //UILabel 交互默认关闭
+        self.panView.isUserInteractionEnabled = true
+        self.panView.text = "手势✋"
+        self.panView.textAlignment = .center
+        self.panView.center = self.view.center
+        self.panView.backgroundColor = UIColor.red
+        self.view.addSubview(self.panView)
+    }
     
     func createGestureRecognizer(){
 //MARK: UISwipeGestureRecognizer            滑动(默认向右滑动)
@@ -75,18 +86,11 @@ class GestureRecognizerViewController: UIViewController {
         
 //MARK: UIPanGestureRecognizer                  拖动
         
-        self.panView = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
-        self.panView.center = self.view.center
-        self.panView.backgroundColor = UIColor.red
-        self.view.addSubview(self.panView)
-        
         let pan = UIPanGestureRecognizer(target: self, action: #selector(self.panEvent(_:)))
         //最大触摸点数
         pan.maximumNumberOfTouches = 1
         self.panView.addGestureRecognizer(pan)
-        
-        
-        
+    
     }
     
 
@@ -95,11 +99,11 @@ class GestureRecognizerViewController: UIViewController {
     }
     
     func tapEvent(){
-        print("单击轻点")
+        print("单击")
     }
     
     func tapDoubleEvent(){
-        print("双击轻点")
+        print("双击")
     }
     
     func pinchEvent(_ recognizer:UIPinchGestureRecognizer){

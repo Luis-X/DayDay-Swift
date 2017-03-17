@@ -20,7 +20,9 @@ class WebViewViewController: UIViewController, UIWebViewDelegate {
         // Do any additional setup after loading the view.
         self.view.backgroundColor = UIColor.white
         self.navigationItem.title = "UIWebView"
+        createSegmentControl()
         createUIWebView()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,22 +40,22 @@ class WebViewViewController: UIViewController, UIWebViewDelegate {
         // Pass the selected object to the new view controller.
     }
     */
-
-    func createUIWebView(){
+    
+    func createSegmentControl() {
         
-        let segmentItmes = ["Request", "HTML", "Data"]
+        let segmentItmes = ["Request类型", "HTML类型", "Data类型"]
         segmentControl = UISegmentedControl(items: segmentItmes)
         segmentControl.frame = CGRect(x: 10, y: 10, width: self.view.frame.size.width - 20, height: 30)
-        segmentControl.selectedSegmentIndex = 0
         self.view.addSubview(segmentControl)
         segmentControl.addTarget(self, action: #selector(self.segmentChange(_:)), for: .valueChanged)
         
+    }
+
+    //MARK: -UIWebView
+    func createUIWebView(){
         
-        
-        
-        
-//MARK: -UIWebView
-        webView = UIWebView(frame: CGRect(x: 0, y: segmentControl.frame.origin.y + segmentControl.frame.size.height, width: self.view.frame.size.width, height: self.view.frame.size.height - segmentControl.frame.size.height - 64 - 10))
+        webView = UIWebView(frame: CGRect(x: 0, y: segmentControl.frame.origin.y + segmentControl.frame.size.height + 20, width: self.view.frame.size.width, height: self.view.frame.size.height - segmentControl.frame.size.height - 64 - 48 - 10 - 20))
+        webView.delegate = self
 //属性
         //是否可以放大缩小页面            (默认:false)
         webView.scalesPageToFit = true
@@ -99,21 +101,21 @@ class WebViewViewController: UIViewController, UIWebViewDelegate {
 //MARK: -UIWebViewDelegate
     //加载网页时
     func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
-        print("加载中")
+        print("准备加载...")
         return true
     }
     
     //开始加载之前
     func webViewDidStartLoad(_ webView: UIWebView) {
-        print("加载前")
+        print("加载开始...")
     }
     //加载完成之后
     func webViewDidFinishLoad(_ webView: UIWebView) {
-        print("加载后")
+        print("加载完成...")
     }
     //加载错误
     func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
-        print("加载错误")
+        print("加载错误...")
     }
     
     

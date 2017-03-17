@@ -19,7 +19,7 @@ class EditTableViewViewController: UIViewController, UIGestureRecognizerDelegate
 
         // Do any additional setup after loading the view.
         self.view.backgroundColor = UIColor.white
-        self.navigationItem.title = "编辑 UITableView"
+        self.navigationItem.title = "编辑UITableView"
         initailData()
         createEditTableView()
     }

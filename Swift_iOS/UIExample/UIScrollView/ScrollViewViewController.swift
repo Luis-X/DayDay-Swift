@@ -76,7 +76,7 @@ class ScrollViewViewController: UIViewController, UIScrollViewDelegate {
         for i in 0..<numberPages {
             //重写了初始化方法
             let myViewController = MyScrollViewController(number: (i + 1))
-            myViewController.view.frame = CGRect(x: scrollView.frame.size.width * CGFloat(i), y: 0, width: scrollView.frame.size.width, height: scrollView.frame.size.height - 64)
+            myViewController.view.frame = CGRect(x: scrollView.frame.size.width * CGFloat(i), y: 0, width: scrollView.frame.size.width, height: scrollView.frame.size.height - 48)
             scrollView.addSubview(myViewController.view)
         }
         self.view.addSubview(scrollView)

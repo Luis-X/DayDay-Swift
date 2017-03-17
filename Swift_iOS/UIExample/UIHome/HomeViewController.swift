@@ -9,22 +9,23 @@
 import UIKit
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    var allHomeTableViewArr = ["基础UI",
-                               "弹出视图 UIAlertViewController",
-                               "选择框 UIPickerView",
-                               "微调器 UIStepper",
-                               "滚动视图 UIScrollView",
-                               "加速度传感器 CoreMotion",
-                               "手势 UIGestureRecognizer",
-                               "日期选择器 UIDatePicker",
-                               "网页控件 UIWebView",
-                               "工具条 UIToolBar",
-                               "表格 UITableView",
-                               "自定义 UITableView",
-                                "编辑 UITableView",
-                                "搜索条 UISearchBar",
-                                "网格 UICollectionView"
-                               ]
+    var allHomeTableViewArr = [
+        ["基础":"UI"],
+        ["弹框":"UIAlertViewController"],
+        ["选择框":"UIPickerView"],
+        ["微调器":"UIStepper"],
+        ["滚动视图":"UIScrollView"],
+        ["加速度传感器":"CoreMotion"],
+        ["手势":"UIGestureRecognizer"],
+        ["日期选择器":"UIDatePicker"],
+        ["网页":"UIWebView"],
+        ["工具栏":"UIToolBar"],
+        ["列表":"UITableView"],
+        ["自定义列表":"UITableView"],
+        ["编辑列表":"UITableView"],
+        ["搜索栏":"UISearchBar"],
+        ["网格":"UICollectionView"]
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +35,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.view.backgroundColor = UIColor.white
         self.navigationItem.title = "UI"
         self.navigationController?.navigationBar.isTranslucent = false
+        
         self.createSubViews()
     }
 
@@ -60,7 +62,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         homeTable.delegate = self
         homeTable.dataSource = self
         self.view.addSubview(homeTable)
-        homeTable.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        homeTable.register(HomeTableViewCell.self, forCellReuseIdentifier: "cell")
     }
     
     
@@ -69,9 +71,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 //MARK:-UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as UITableViewCell
-        cell.textLabel?.text = String(allHomeTableViewArr[indexPath.row])
-        //cell.textLabel?.textAlignment = .Center
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! HomeTableViewCell
+        let menuDic = allHomeTableViewArr[indexPath.row]
+        cell.textLabel?.text = menuDic.keys.first
+        cell.detailTextLabel?.text = menuDic.values.first
         return cell
     }
     
@@ -161,6 +164,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
+        return 60
     }
 }

@@ -79,7 +79,7 @@ class DatePickerViewController: UIViewController {
         
         let button = UIButton(type: .custom)
         button.frame = CGRect(x: datePickerView.frame.origin.x, y: datePickerView.frame.origin.y + datePickerView.frame.size.height + 10, width: datePickerView.frame.size.width, height: 50)
-        button.setTitle("显示时间", for: UIControlState())
+        button.setTitle("确定", for: UIControlState())
         button.backgroundColor = UIColor.orange
         self.view.addSubview(button)
         button.addTarget(self, action: #selector(self.showClicked(_:)), for: .touchUpInside)
@@ -113,7 +113,7 @@ class DatePickerViewController: UIViewController {
 //MARK: 倒计时         (必须为60的整数倍)
     func createCountDownTimeDatePicker(){
         
-        downDatePicker = UIDatePicker(frame: CGRect(x: 0, y: self.view.frame.size.height - 200 - 64, width: self.view.frame.size.width, height: 150))
+        downDatePicker = UIDatePicker(frame: CGRect(x: 0, y: datePickerView.frame.size.height + 100, width: self.view.frame.size.width, height: 150))
         //倒计时模式
         downDatePicker.datePickerMode = .countDownTimer
         //必须是60的整数倍, 如果设置100,值自动变为60

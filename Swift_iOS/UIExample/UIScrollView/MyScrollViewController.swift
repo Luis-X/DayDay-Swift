@@ -40,7 +40,7 @@ class MyScrollViewController: UIViewController {
         
         let numberLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
         numberLabel.center = self.view.center
-        numberLabel.text = "第\(number)页"
+        numberLabel.text = "第\(number!)页"
         numberLabel.textAlignment = .center
         numberLabel.textColor = UIColor.white
         self.view.addSubview(numberLabel)

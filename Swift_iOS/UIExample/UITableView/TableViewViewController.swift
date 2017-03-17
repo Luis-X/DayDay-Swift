@@ -115,7 +115,7 @@ class TableViewViewController: UIViewController , UITableViewDataSource, UITable
         let cell3 = UITableViewCell(style: .value2, reuseIdentifier: "cell3") as UITableViewCell
     
         if indexPath.section == 0 {
-            //右侧样式
+            //Default样式
             cell.accessoryType = .checkmark
             cell.textLabel?.text = String(describing: self.allTableViewArray3[indexPath.row])
             cell.detailTextLabel?.text = "Default"
@@ -123,7 +123,7 @@ class TableViewViewController: UIViewController , UITableViewDataSource, UITable
             return cell
         }
         if indexPath.section == 1 {
-            //右侧样式
+            //Subtitle样式
             cell1.accessoryType = .detailButton
             cell1.textLabel?.text = String(describing: self.allTableViewArray3[indexPath.row])
             cell1.detailTextLabel?.text = "Subtitle"
@@ -131,7 +131,7 @@ class TableViewViewController: UIViewController , UITableViewDataSource, UITable
             return cell1
         }
         if indexPath.section == 2 {
-            //右侧样式
+            //Value1样式
             cell2.accessoryType = .detailDisclosureButton
             cell2.textLabel?.text = String(describing: self.allTableViewArray3[indexPath.row])
             cell2.detailTextLabel?.text = "Value1"
@@ -139,7 +139,7 @@ class TableViewViewController: UIViewController , UITableViewDataSource, UITable
             return cell2
         }
         if indexPath.section == 3 {
-            //右侧样式
+            //Value2样式
             cell3.accessoryType = .disclosureIndicator
             cell3.textLabel?.text = String(describing: self.allTableViewArray3[indexPath.row])
             cell3.detailTextLabel?.text = "Value2"

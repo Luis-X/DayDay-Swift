@@ -17,7 +17,7 @@ class CustomTableViewController: UIViewController, CustomTableViewCellDelegate, 
 
         // Do any additional setup after loading the view.
         self.view.backgroundColor = UIColor.white
-        self.navigationItem.title = "自定义 UITableView"
+        self.navigationItem.title = "自定义UITableView"
         initalData()
         createSubViews()
         

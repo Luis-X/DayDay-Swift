@@ -68,11 +68,11 @@ class ViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate{
         let button = UIButton.init(type: UIButtonType.custom)
         button.frame = CGRect(x: lable.frame.origin.x, y: lable.frame.origin.y + lable.frame.size.height + 10, width: lable.frame.size.width, height: 30)
         button.backgroundColor = UIColor.black
-        button.setTitle("普通状态", for: UIControlState())
-        button.setTitle("触摸状态", for: UIControlState.highlighted)
-        button.setTitle("禁用状态", for: UIControlState.disabled)
+        button.setTitle("UIButton 普通", for: UIControlState())
+        button.setTitle("UIButton 触摸", for: UIControlState.highlighted)
+        button.setTitle("UIButton 禁用", for: UIControlState.disabled)
         //简写(参数是结构体)
-        button.setTitle("普通状态", for: UIControlState())
+        button.setTitle("UIButton 普通", for: UIControlState())
         self.view .addSubview(button)
         button.addTarget(self, action:#selector(self.tappedEvent(_:)) , for: .touchUpInside)
         
@@ -116,7 +116,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate{
         textView.layer.borderWidth = 0.5
         //是否可以编辑
         textView.isEditable = true
-        textView.text = "第一行\n第二行\n第三行 15504222202"
+        textView.text = "第一行\n第二行\n第三行 1234567890"
         //电话和文字自动加链接
         textView.dataDetectorTypes = .phoneNumber
         //允许编辑操作
@@ -249,24 +249,24 @@ class ViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate{
     
     //按钮
     func tappedEvent(_ button:UIButton) {
-        print("按钮 没有返回值")
+        print("UIButton 没有返回值")
     }
     
     //开关
     func switchBtnEvent(_ switchButton:UISwitch) {
         if (switchButton.isSelected) {
             switchButton.isSelected = false
-            print("开")
+            print("UISwitch开")
         }else{
             switchButton.isSelected = true
-            print("关")
+            print("UISwitch关")
         }
     }
     
     //选项卡
     func segmentControlEvent(_ segment:UISegmentedControl) {
-        print("选中", segment.selectedSegmentIndex)
-        print("内容", segment.titleForSegment(at: segment.selectedSegmentIndex))
+        print("UISegmentedControl选中", segment.selectedSegmentIndex)
+        print("UISegmentedControl内容", segment.titleForSegment(at: segment.selectedSegmentIndex))
     }
     
     
@@ -279,13 +279,13 @@ class ViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate{
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         //回收键盘
         textField.resignFirstResponder()
-        print("点击了Return键")
+        print("UITextField点击了Return键")
         return true
     }
     
 //MARK: -UITextViewDelegate
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        print("TF开始编辑")
+        print("UITextField开始编辑")
         return true
     }
 

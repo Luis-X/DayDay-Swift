@@ -53,7 +53,7 @@ class PickerViewViewController: UIViewController, UIPickerViewDataSource, UIPick
         let pickerSelectedBtn = UIButton.init(type: .custom)
         pickerSelectedBtn.frame = CGRect(x: myPickerView.frame.origin.x, y: myPickerView.frame.origin.y + myPickerView.frame.size.height, width: myPickerView.frame.size.width, height: 50)
         pickerSelectedBtn.backgroundColor = UIColor.red
-        pickerSelectedBtn.setTitle("获取信息", for: UIControlState())
+        pickerSelectedBtn.setTitle("确定", for: UIControlState())
         self.view.addSubview(pickerSelectedBtn)
         pickerSelectedBtn.addTarget(self, action: #selector(self.getPickerViewValue), for: .touchUpInside)
     }
@@ -62,7 +62,7 @@ class PickerViewViewController: UIViewController, UIPickerViewDataSource, UIPick
     func getPickerViewValue(){
         //获得指定列被选中的索引
         let messageStr = String(myPickerView.selectedRow(inComponent: 0)) + "-" + String(myPickerView.selectedRow(inComponent: 1)) + "-" + String(myPickerView.selectedRow(inComponent: 2))
-        let alertVC = UIAlertController.init(title: "被选中的索引为", message: messageStr, preferredStyle: .alert)
+        let alertVC = UIAlertController.init(title: "选中的索引为", message: messageStr, preferredStyle: .alert)
         let sureAction = UIAlertAction.init(title: "确定", style: .default) { (UIAlertAction) in
             
         }
