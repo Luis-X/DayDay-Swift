@@ -167,7 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				D108B2631E69634D00A806E7 /* Resource */,
-				D108B25C1E69632400A806E7 /* KnowledgeExample(基础) */,
+				D108B25C1E69632400A806E7 /* KnowledgeExample(语法知识) */,
 				D1FCC22C1E7BE7720010C997 /* UIExample(UI示例) */,
 				185CC93F1CA9108800950E8B /* AppDelegate.swift */,
 				185CC9431CA9108800950E8B /* Main.storyboard */,
@@ -196,15 +196,15 @@
 			path = Swift_iOSUITests;
 			sourceTree = "<group>";
 		};
-		D108B25C1E69632400A806E7 /* KnowledgeExample(基础) */ = {
+		D108B25C1E69632400A806E7 /* KnowledgeExample(语法知识) */ = {
 			isa = PBXGroup;
 			children = (
-				D1FCC2671E7BF0190010C997 /* UseObjectiveC */,
+				D1FCC2671E7BF0190010C997 /* UseObjectiveC(swift调用Objective-C) */,
 				D108B25D1E69632400A806E7 /* Animal.swift */,
 				D108B25E1E69632400A806E7 /* Person.swift */,
 				D108B25F1E69632400A806E7 /* SceondViewController.swift */,
 			);
-			name = "KnowledgeExample(基础)";
+			name = "KnowledgeExample(语法知识)";
 			path = KnowledgeExample;
 			sourceTree = "<group>";
 		};
@@ -425,12 +425,13 @@
 			path = UIHome;
 			sourceTree = "<group>";
 		};
-		D1FCC2671E7BF0190010C997 /* UseObjectiveC */ = {
+		D1FCC2671E7BF0190010C997 /* UseObjectiveC(swift调用Objective-C) */ = {
 			isa = PBXGroup;
 			children = (
 				D1FCC2681E7BF0190010C997 /* UseObject.h */,
 				D1FCC2691E7BF0190010C997 /* UseObject.m */,
 			);
+			name = "UseObjectiveC(swift调用Objective-C)";
 			path = UseObjectiveC;
 			sourceTree = "<group>";
 		};

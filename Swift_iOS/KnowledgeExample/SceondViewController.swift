@@ -16,7 +16,7 @@ class SceondViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         self.view.backgroundColor = UIColor.white
-        self.navigationItem.title = "基础"
+        self.navigationItem.title = "语法知识"
         self.navigationController?.navigationBar.isTranslucent = false
         
         createPerson()

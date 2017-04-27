@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let secondNaVC = UINavigationController(rootViewController: secondVC)
         let baseNormalPic = UIImage(named: "base_normal@2x.png")
         let baseSelectedPic = UIImage(named: "base_selected@2x.png")
-        secondNaVC.tabBarItem = UITabBarItem(title: "基础", image: baseNormalPic, selectedImage: baseSelectedPic)
+        secondNaVC.tabBarItem = UITabBarItem(title: "语法", image: baseNormalPic, selectedImage: baseSelectedPic)
         
         let rootTabBarC = UITabBarController()
         rootTabBarC.viewControllers = [homeNaVC, secondNaVC]
