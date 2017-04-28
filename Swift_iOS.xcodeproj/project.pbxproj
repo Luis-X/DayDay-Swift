@@ -26,6 +26,7 @@
 		D108B2721E69634D00A806E7 /* base_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D108B26A1E69634D00A806E7 /* base_selected@2x.png */; };
 		D108B2731E69634D00A806E7 /* ui_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D108B26B1E69634D00A806E7 /* ui_normal@2x.png */; };
 		D108B2741E69634D00A806E7 /* ui_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D108B26C1E69634D00A806E7 /* ui_selected@2x.png */; };
+		D118168F1EB2ED7E004C238A /* UIToolBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D118168E1EB2ED7E004C238A /* UIToolBarViewController.swift */; };
 		D1FCC2511E7BE7720010C997 /* CustomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FCC2301E7BE7720010C997 /* CustomTableViewController.swift */; };
 		D1FCC2521E7BE7720010C997 /* MessageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FCC2321E7BE7720010C997 /* MessageItem.swift */; };
 		D1FCC2531E7BE7720010C997 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FCC2341E7BE7720010C997 /* CustomTableViewCell.swift */; };
@@ -91,6 +92,7 @@
 		D108B26A1E69634D00A806E7 /* base_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "base_selected@2x.png"; sourceTree = "<group>"; };
 		D108B26B1E69634D00A806E7 /* ui_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ui_normal@2x.png"; sourceTree = "<group>"; };
 		D108B26C1E69634D00A806E7 /* ui_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ui_selected@2x.png"; sourceTree = "<group>"; };
+		D118168E1EB2ED7E004C238A /* UIToolBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIToolBarViewController.swift; sourceTree = "<group>"; };
 		D1FCC2301E7BE7720010C997 /* CustomTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewController.swift; sourceTree = "<group>"; };
 		D1FCC2321E7BE7720010C997 /* MessageItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageItem.swift; sourceTree = "<group>"; };
 		D1FCC2341E7BE7720010C997 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
@@ -392,6 +394,7 @@
 		D1FCC24C1E7BE7720010C997 /* UIToolBar(工具栏) */ = {
 			isa = PBXGroup;
 			children = (
+				D118168E1EB2ED7E004C238A /* UIToolBarViewController.swift */,
 			);
 			name = "UIToolBar(工具栏)";
 			path = UIToolBar;
@@ -593,6 +596,7 @@
 				D1FCC25B1E7BE7720010C997 /* MyScrollViewController.swift in Sources */,
 				D1FCC25A1E7BE7720010C997 /* PickerViewViewController.swift in Sources */,
 				D1FCC25E1E7BE7720010C997 /* StepperViewController.swift in Sources */,
+				D118168F1EB2ED7E004C238A /* UIToolBarViewController.swift in Sources */,
 				D1FCC25F1E7BE7720010C997 /* TableViewViewController.swift in Sources */,
 				D1FCC2511E7BE7720010C997 /* CustomTableViewController.swift in Sources */,
 				D1FCC2661E7BE9E10010C997 /* HomeTableViewCell.swift in Sources */,

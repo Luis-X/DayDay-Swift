@@ -85,31 +85,32 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if (indexPath.row) == 0 {
             let swiftBaseVC = ViewController()
+            swiftBaseVC.hidesBottomBarWhenPushed = true;
             self.navigationController?.pushViewController(swiftBaseVC, animated: true)
         }
         
         if (indexPath.row) == 1 {
             let learnViewVC = AlertVCViewController()
+            learnViewVC.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(learnViewVC, animated: true)
-            
         }
         
         if (indexPath.row) == 2 {
             let pickerViewVC = PickerViewViewController()
+            pickerViewVC.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(pickerViewVC, animated: true)
-            
         }
         
         if (indexPath.row) == 3 {
             let stepperVC = StepperViewController()
+            stepperVC.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(stepperVC, animated: true)
-            
         }
         
         if (indexPath.row) == 4 {
             let scrollViewVC = ScrollViewViewController()
+            scrollViewVC.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(scrollViewVC, animated: true)
-    
         }
         
         if (indexPath.row) == 5 {
@@ -118,47 +119,55 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         if (indexPath.row) == 6 {
             let gestureRecognizerVC = GestureRecognizerViewController()
+            gestureRecognizerVC.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(gestureRecognizerVC, animated: true)
         }
         
         if (indexPath.row) == 7 {
             let datePickerVC = DatePickerViewController()
+            datePickerVC.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(datePickerVC, animated: true)
         }
         
         if (indexPath.row) == 8 {
             let webVC = WebViewViewController()
+            webVC.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(webVC, animated: true)
         }
         
         if (indexPath.row) == 9 {
-            print("工具条")
+            let toolBarVC = UIToolBarViewController()
+            toolBarVC.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(toolBarVC, animated: true)
         }
         
         if (indexPath.row) == 10 {
             let tableViewVC = TableViewViewController()
+            tableViewVC.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(tableViewVC, animated: true)
-            
         }
         
         if (indexPath.row == 11) {
             let customTableViewVC = CustomTableViewController()
+            customTableViewVC.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(customTableViewVC, animated: true)
         }
         
         if (indexPath.row == 12) {
             let editTableVC = EditTableViewViewController()
+            editTableVC.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(editTableVC, animated: true)
-            
         }
         
         if (indexPath.row == 13) {
             let searchBarVC = SearchBarViewController()
+            searchBarVC.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(searchBarVC, animated: true)
         }
         
         if (indexPath.row == 14) {
             let collectionVC = CollectionViewViewController()
+            collectionVC.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(collectionVC, animated: true)
         }
     }
