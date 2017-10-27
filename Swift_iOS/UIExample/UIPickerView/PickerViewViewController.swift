@@ -59,7 +59,7 @@ class PickerViewViewController: UIViewController, UIPickerViewDataSource, UIPick
     }
     
     
-    func getPickerViewValue(){
+    @objc func getPickerViewValue(){
         //获得指定列被选中的索引
         let messageStr = String(myPickerView.selectedRow(inComponent: 0)) + "-" + String(myPickerView.selectedRow(inComponent: 1)) + "-" + String(myPickerView.selectedRow(inComponent: 2))
         let alertVC = UIAlertController.init(title: "选中的索引为", message: messageStr, preferredStyle: .alert)

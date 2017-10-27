@@ -94,29 +94,29 @@ class GestureRecognizerViewController: UIViewController {
     }
     
 
-    func swipeEvent(){
+    @objc func swipeEvent(){
         print("滑动")
     }
     
-    func tapEvent(){
+    @objc func tapEvent(){
         print("单击")
     }
     
-    func tapDoubleEvent(){
+    @objc func tapDoubleEvent(){
         print("双击")
     }
     
-    func pinchEvent(_ recognizer:UIPinchGestureRecognizer){
+    @objc func pinchEvent(_ recognizer:UIPinchGestureRecognizer){
         //监听    捏合比例
         print("捏合\(recognizer.scale)")
     }
     
-    func roationEvent(_ recognizer:UIRotationGestureRecognizer){
+    @objc func roationEvent(_ recognizer:UIRotationGestureRecognizer){
         //监听    旋转角度
         print("旋转\(recognizer.rotation * (180 / CGFloat(M_PI)))")
     }
     
-    func panEvent(_ recognizer:UIPanGestureRecognizer){
+    @objc func panEvent(_ recognizer:UIPanGestureRecognizer){
         //监听    拖动时触摸的位置(中心点)
         let panPoint = recognizer.location(in: self.view)
         print("拖动\(panPoint)")

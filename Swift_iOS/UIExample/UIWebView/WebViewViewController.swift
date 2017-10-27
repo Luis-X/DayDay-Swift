@@ -122,7 +122,7 @@ class WebViewViewController: UIViewController, UIWebViewDelegate {
     
     
     
-    func segmentChange(_ sender:UISegmentedControl){
+    @objc func segmentChange(_ sender:UISegmentedControl){
         switch sender.selectedSegmentIndex {
         case 0://Request
             webView.loadRequest(URLRequest(url: URL(string: "https://www.baidu.com")!))

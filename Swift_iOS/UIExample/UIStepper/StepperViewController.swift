@@ -81,7 +81,7 @@ class StepperViewController: UIViewController {
     }
     
     //微调器
-    func showStepperChangeValue(){
+    @objc func showStepperChangeValue(){
         //print(stepperView.value)
         label.text = String("当前值为: \(stepperView.value)")
     }

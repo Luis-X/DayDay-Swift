@@ -79,7 +79,7 @@ class AlertVCViewController: UIViewController, UIAlertViewDelegate, UIActionShee
     
     
 //MARK: UIAlertView
-    func showMyAlertView(){
+    @objc func showMyAlertView(){
         
         let alertView = UIAlertView.init(title: "UIAlertView", message: "信息", delegate: self, cancelButtonTitle: "取消")
         alertView.show()
@@ -94,7 +94,7 @@ class AlertVCViewController: UIViewController, UIAlertViewDelegate, UIActionShee
     
 //MARK: UIAlertView_iOS9
     //iOS9推荐使用UIAlertController
-    func showMyAlertViewIOS9() {
+    @objc func showMyAlertViewIOS9() {
         let alertViewController = UIAlertController.init(title: "UIAlertController", message: "信息", preferredStyle: .alert)
         let alertAction = UIAlertAction.init(title: "确定", style: .destructive) { (UIAlertAction) in
             print("UIAlertController确定")
@@ -111,7 +111,7 @@ class AlertVCViewController: UIViewController, UIAlertViewDelegate, UIActionShee
     
     
 //MARK: UIActionSheet
-    func showActionSheetView() {
+    @objc func showActionSheetView() {
         let actionSheetView = UIActionSheet.init(title: "UIActionSheet", delegate: self, cancelButtonTitle: "选项1", destructiveButtonTitle: "选项2")
         //普通
         actionSheetView.show(in: self.view)
@@ -130,7 +130,7 @@ class AlertVCViewController: UIViewController, UIAlertViewDelegate, UIActionShee
     }
     
 //MARK: UIActionSheet_iOS9
-    func showActionSheetViewIOS9() {
+    @objc func showActionSheetViewIOS9() {
        let actionSheetControl = UIAlertController.init(title: "UIAlertController", message: "信息", preferredStyle: .actionSheet)
         let oneSheet = UIAlertAction.init(title: "选项1", style: .default) { (UIAlertAction) in
             print("选项1")

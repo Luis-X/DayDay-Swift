@@ -86,7 +86,7 @@ class DatePickerViewController: UIViewController {
         
     }
 
-    func showClicked(_ sender:UIButton){
+    @objc func showClicked(_ sender:UIButton){
         let date = datePickerView.date
         //创建时间格式
         let dformatter = DateFormatter()
@@ -140,12 +140,12 @@ class DatePickerViewController: UIViewController {
     
     
     
-    func downDatePickerChange(){
+    @objc func downDatePickerChange(){
         print("倒计时:" + String(datePickerView.countDownDuration))
     }
     
     //倒计时开始
-    func startClicked(_ sender:UIButton){
+    @objc func startClicked(_ sender:UIButton){
         startBtn.isEnabled = false
         
         //获取倒计时剩余时间
@@ -170,7 +170,7 @@ class DatePickerViewController: UIViewController {
     }
     
 //记时方法
-    func tickDown(){
+    @objc func tickDown(){
         //剩余秒数-1
         shengyuTime -= 1
         //修改剩余秒数

@@ -63,7 +63,7 @@ class EditTableViewViewController: UIViewController, UIGestureRecognizerDelegate
     }
     
 //长按触发(编辑状态切换)
-    func tableViewCellLongPressEvent(_ sender:AnyObject) {
+    @objc func tableViewCellLongPressEvent(_ sender:AnyObject) {
         if (sender.isKind(of: UILongPressGestureRecognizer.self)) {
             if (sender.state == .began) {
                 print("长按开始")

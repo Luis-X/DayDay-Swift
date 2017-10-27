@@ -248,12 +248,12 @@ class ViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate{
     
     
     //按钮
-    func tappedEvent(_ button:UIButton) {
+    @objc func tappedEvent(_ button:UIButton) {
         print("UIButton 没有返回值")
     }
     
     //开关
-    func switchBtnEvent(_ switchButton:UISwitch) {
+    @objc func switchBtnEvent(_ switchButton:UISwitch) {
         if (switchButton.isSelected) {
             switchButton.isSelected = false
             print("UISwitch开")
@@ -264,7 +264,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate{
     }
     
     //选项卡
-    func segmentControlEvent(_ segment:UISegmentedControl) {
+    @objc func segmentControlEvent(_ segment:UISegmentedControl) {
         print("UISegmentedControl选中", segment.selectedSegmentIndex)
         print("UISegmentedControl内容", segment.titleForSegment(at: segment.selectedSegmentIndex))
     }

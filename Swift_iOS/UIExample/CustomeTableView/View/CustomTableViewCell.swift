@@ -118,7 +118,7 @@ class CustomTableViewCell: UITableViewCell {
     
 //代理方法
 
-    func useMyDelegateFunc() {
+    @objc func useMyDelegateFunc() {
         self.myDelegate?.rowsForChatTable(tableviewCell: self)
         self.myDelegate?.chatTableView(tableviewCell: self, dataForRow: 1)
     }

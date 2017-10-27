@@ -63,7 +63,7 @@ class MessageItem: NSObject {
         let font = UIFont.systemFont(ofSize: 12)
         let width = 375
         let height = 1000.0
-        let atts = [NSFontAttributeName : font]
+        let atts = [NSAttributedStringKey.font : font]
         /*
         let attsDic = NSMutableDictionary()
         attsDic.setObject(font, forKey: NSFontAttributeName)
