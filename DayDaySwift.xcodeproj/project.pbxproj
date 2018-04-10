@@ -44,7 +44,7 @@
 		D1B7076D2023463C0049A177 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D1B707652023463C0049A177 /* 2.jpg */; };
 		D1B7076E2023463C0049A177 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D1B707662023463C0049A177 /* 3.jpg */; };
 		D1B7076F2023463C0049A177 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D1B707672023463C0049A177 /* 1.jpg */; };
-		D1B70771202346C20049A177 /* jiawen.gpx in Resources */ = {isa = PBXBuildFile; fileRef = D1B70770202346C20049A177 /* jiawen.gpx */; };
+		D1B70771202346C20049A177 /* location.gpx in Resources */ = {isa = PBXBuildFile; fileRef = D1B70770202346C20049A177 /* location.gpx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,7 +109,7 @@
 		D1B707652023463C0049A177 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
 		D1B707662023463C0049A177 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
 		D1B707672023463C0049A177 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
-		D1B70770202346C20049A177 /* jiawen.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = jiawen.gpx; sourceTree = "<group>"; };
+		D1B70770202346C20049A177 /* location.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = location.gpx; sourceTree = "<group>"; };
 		D1B70772202347A00049A177 /* OCBrdigeHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCBrdigeHeader.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -141,7 +141,7 @@
 		D1B706E0202345A30049A177 = {
 			isa = PBXGroup;
 			children = (
-				D1B70770202346C20049A177 /* jiawen.gpx */,
+				D1B70770202346C20049A177 /* location.gpx */,
 				D1B706EB202345A30049A177 /* DayDaySwift */,
 				D1B70700202345A30049A177 /* DayDaySwiftTests */,
 				D1B7070B202345A40049A177 /* DayDaySwiftUITests */,
@@ -522,7 +522,7 @@
 				D1B7076E2023463C0049A177 /* 3.jpg in Resources */,
 				D1B707682023463C0049A177 /* ui_selected@2x.png in Resources */,
 				D1B7076A2023463C0049A177 /* ui_normal@2x.png in Resources */,
-				D1B70771202346C20049A177 /* jiawen.gpx in Resources */,
+				D1B70771202346C20049A177 /* location.gpx in Resources */,
 				D1B706F4202345A30049A177 /* Assets.xcassets in Resources */,
 				D1B706F2202345A30049A177 /* Main.storyboard in Resources */,
 			);
